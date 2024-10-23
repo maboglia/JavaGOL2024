@@ -1,10 +1,12 @@
 import java.util.Scanner;
 
 public class GuessTheNumber {
-
+	
+	static final int NUMERO_TENTATIVI=500;
+	
 	public static void main(String[] args) {
 		
-		final int NUMERO_TENTATIVI=500;
+		
 		int numeroSegreto = (int)(Math.random() * NUMERO_TENTATIVI) + 1;
 		boolean gira = true;
 		int tentativi = 0;
