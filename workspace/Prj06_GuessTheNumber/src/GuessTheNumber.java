@@ -4,11 +4,12 @@ public class GuessTheNumber {
 
 	public static void main(String[] args) {
 		
-		int numeroSegreto = (int)(Math.random() * 100) + 1;
+		final int NUMERO_TENTATIVI=500;
+		int numeroSegreto = (int)(Math.random() * NUMERO_TENTATIVI) + 1;
 		boolean gira = true;
 		int tentativi = 0;
 		
-		while(gira) {
+		while(gira && tentativi < 15) {
 			int leggiIntero = leggiIntero();
 			tentativi++;
 			
@@ -33,7 +34,7 @@ public class GuessTheNumber {
 
 	private static int leggiIntero() {
 		Scanner input = new Scanner(System.in);
-		System.out.println("Inserisci un numero intero tra 0 e 100");
+		System.out.println("Inserisci un numero intero tra 0 e "+NUMERO_TENTATIVI);
 		return input.nextInt();
 	}
 
