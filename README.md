@@ -7,3 +7,5 @@ Repo del corso Java Backend
 - JRE
 - JDK
 - javac
+
+## lezione 2:  
