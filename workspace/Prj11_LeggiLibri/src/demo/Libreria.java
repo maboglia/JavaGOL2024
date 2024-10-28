@@ -15,7 +15,17 @@ public class Libreria {
 		ArrayList<String> leggiRighe = 
 				LeggiScriviFile.leggiRighe(new File("files/libri.csv"));
 
-		PrintWriter output = new PrintWriter("files/libri.html");
+		ArrayList<String> outputHtml = new ArrayList<>();
+		
+		outputHtml.add("<html>");
+		outputHtml.add("<head>");
+		outputHtml.add("</head>");
+		outputHtml.add("<body>");
+		outputHtml.add("<h1>");
+		outputHtml.add("Elenco libri");
+		outputHtml.add("</h1>");
+		
+		outputHtml.add("<table>");
 		
 		for (String riga : leggiRighe) {
 			String[] split = riga.split(",");
@@ -27,10 +37,41 @@ public class Libreria {
 			double prezzo = Double.parseDouble(split[4].replaceAll("\"", ""));
 			
 			Libro l = new Libro(titolo, autore, pagine, editore, prezzo);
-			output.println(l);
+			
+			if (l.getEditore().equals("Mondadori")) {
+			
+			outputHtml.add("<tr>");
+
+			outputHtml.add("<td>");
+				outputHtml.add(l.getTitolo());
+			outputHtml.add("</td>");
+
+			outputHtml.add("<td>");
+			outputHtml.add(l.getAutore());
+			outputHtml.add("</td>");
+			
+			outputHtml.add("<td>");
+			outputHtml.add(l.getEditore());
+			outputHtml.add("</td>");
+			
+			outputHtml.add("<td>");
+			outputHtml.add(""+l.getPagine());
+			outputHtml.add("</td>");
+			
+			outputHtml.add("<td>");
+			outputHtml.add(""+l.getPrezzo());
+			outputHtml.add("</td>");
+			
+			outputHtml.add("</tr>");
+			}
 		}
-		output.close();
 		
+		outputHtml.add("</table>");
+		outputHtml.add("</body>");
+		outputHtml.add("</html>");
+		
+		LeggiScriviFile.scriviRighe(outputHtml, new File("files/libri.html"));
+		System.out.println("Lavoro terminato");
 	}
 
 }
