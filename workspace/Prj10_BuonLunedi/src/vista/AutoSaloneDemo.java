@@ -16,11 +16,15 @@ public class AutoSaloneDemo {
 
 	public static void main(String[] args) throws FileNotFoundException {
 
+		
+		
 
 		RegistroController ctrl = new RegistroController();
 		
 		ArrayList<String> lettura = 
 				LeggiScriviFile.leggiRighe(new File("files/auto.csv"));
+		
+		LeggiScriviFile.scriviRighe(lettura, new File("files/auto_copia.csv"));
 
 		try {
 			for(String riga : lettura) {
