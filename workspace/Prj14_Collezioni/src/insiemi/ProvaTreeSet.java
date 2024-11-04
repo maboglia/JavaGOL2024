@@ -1,12 +1,13 @@
 package insiemi;
 
 import java.util.HashSet;
+import java.util.Set;
 import java.util.TreeSet;
 
 public class ProvaTreeSet {
 
 	public static void main(String[] args) {
-		TreeSet<String> citta = new TreeSet<String>();
+		Set<String> citta = new TreeSet<String>();
 
 		citta.add("torino");
 		citta.add("torino");

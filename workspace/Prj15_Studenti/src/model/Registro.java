@@ -20,6 +20,11 @@ public class Registro {
 	public List<Studente> getStudenti() {
 		return studenti;
 	}
+
+	@Override
+	public String toString() {
+		return "Registro [corso=" + corso + ", studenti=" + studenti + "]";
+	}
 	
 	
 	

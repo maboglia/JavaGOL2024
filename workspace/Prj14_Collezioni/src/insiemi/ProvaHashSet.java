@@ -5,7 +5,7 @@ import java.util.HashSet;
 public class ProvaHashSet {
 
 	public static void main(String[] args) {
-		HashSet<String> citta = new HashSet<String>();
+		Set<String> citta = new HashSet<String>();
 
 		citta.add("torino");
 		citta.add("torino");

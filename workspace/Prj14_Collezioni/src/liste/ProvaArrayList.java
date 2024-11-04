@@ -1,11 +1,12 @@
 package liste;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProvaArrayList {
 
 	public static void main(String[] args) {
-		ArrayList<String> citta = new ArrayList<>();
+		List<String> citta = new ArrayList<>();
 		
 		citta.add("torino");
 		citta.add("milano");

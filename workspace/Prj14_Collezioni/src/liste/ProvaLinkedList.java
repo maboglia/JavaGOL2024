@@ -1,11 +1,12 @@
 package liste;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class ProvaLinkedList {
 
 	public static void main(String[] args) {
-		LinkedList<String> citta = new LinkedList<>();
+		List<String> citta = new LinkedList<>();
 		
 		citta.add("torino");
 		citta.add("torino");
