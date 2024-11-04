@@ -2,7 +2,7 @@ package model;
 
 import java.util.Objects;
 
-public class Libro {
+public class Libro implements Comparable<Libro> {
 
 	private String titolo;
 	private String autore;
@@ -68,6 +68,12 @@ public class Libro {
 		return Objects.equals(autore, other.autore) && pagine == other.pagine
 				&& Double.doubleToLongBits(prezzo) == Double.doubleToLongBits(other.prezzo)
 				&& Objects.equals(titolo, other.titolo);
+	}
+
+	@Override
+	public int compareTo(Libro altroLibro) {
+		// TODO Auto-generated method stub
+		return Double.compare(this.prezzo, altroLibro.prezzo);
 	}
 	
 	
