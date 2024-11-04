@@ -13,7 +13,7 @@ public class GeometriaDemo {
 		FormaGeometrica t = new Triangolo(a, b, c);
 		FormaGeometrica r = new Rettangolo(new Segmento(a, b), new Segmento(a, c));
 		FormaGeometrica q = new Quadrato(new Segmento(a, b)); 
-		System.out.println(q);
+		System.out.println(t);
 		
 		
 		

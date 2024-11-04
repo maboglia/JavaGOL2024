@@ -13,8 +13,8 @@ public class Triangolo extends FormaGeometrica {
 		this.ac = new Segmento(a, c);
 		this.bc = new Segmento(b, c);
 		this.nome = "Triangolo";
-		this.area = getArea();
-		this.perimetro = getPerimetro();
+//		this.area = getArea();
+//		this.perimetro = getPerimetro();
 	}
 	
 	public double getPerimetro() {
