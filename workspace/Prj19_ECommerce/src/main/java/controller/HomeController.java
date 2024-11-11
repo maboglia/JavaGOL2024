@@ -31,8 +31,10 @@ public class HomeController extends HttpServlet {
 				.getRequestDispatcher("header.jsp")
 				.include(request, response);
 		
-		response.getWriter().print("<a class='btn btn-primary' href='libri'>libri</a>");
-		response.getWriter().print("<a class='btn btn-primary' href='quadri'>quadri</a>");
+		request
+		.getRequestDispatcher("menu.jsp")
+		.include(request, response);
+		
 		
 		request
 		.getRequestDispatcher("footer.jsp")

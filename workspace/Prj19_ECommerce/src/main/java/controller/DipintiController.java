@@ -13,26 +13,34 @@ import java.io.IOException;
 @WebServlet("/quadri")
 public class DipintiController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public DipintiController() {
-    	System.out.println("Servlet DipintiController");
-    	System.out.println("Quando mi hai chiamato la prima volta");
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Hai chiamato via GET quadri");
+	public DipintiController() {
+		System.out.println("Servlet DipintiController");
+		System.out.println("Quando mi hai chiamato la prima volta");
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		request.getRequestDispatcher("header.jsp").include(request, response);
+
+		request.getRequestDispatcher("menu.jsp").include(request, response);
+
+		request.getRequestDispatcher("footer.jsp").include(request, response);
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		System.out.println("Hai chiamato via POST quadri");
 	}
 
