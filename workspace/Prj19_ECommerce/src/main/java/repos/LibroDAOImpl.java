@@ -11,13 +11,13 @@ import model.Libro;
 
 public class LibroDAOImpl implements LibroDAO {
 
+	Connessione c = new Connessione();
 	private Connection conn = null;
 	private Statement statement = null;
 	private ResultSet risultati = null;
 	
 	public LibroDAOImpl() {
-		Connessione c = new Connessione();
-		this.conn = c.getConn();
+		//System.out.println(c.getConn());
 	}
 	
 	@Override
@@ -30,7 +30,7 @@ public class LibroDAOImpl implements LibroDAO {
 	public List<Libro> findAll() {
 		
 		List<Libro> libri = new ArrayList<>();
-		
+		this.conn = c.getConn();
 		try {
 			String sql = "SELECT * FROM libri";
 			this.statement = this.conn.createStatement();
@@ -56,7 +56,20 @@ public class LibroDAOImpl implements LibroDAO {
 
 	@Override
 	public Libro addLibro(Libro l) {
-		// TODO Auto-generated method stub
+		
+		try {
+			this.statement = this.conn.createStatement();
+			String sql = "INSERT INTO libri (titolo, autore, prezzo) VALUES ('"+l.getTitolo()+"', '"+l.getAutore()+"',"+l.getPrezzo()+" )";
+			this.statement.execute(sql);
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		
+		
 		return null;
 	}
 
