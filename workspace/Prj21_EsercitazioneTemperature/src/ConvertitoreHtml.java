@@ -24,8 +24,7 @@ public class ConvertitoreHtml {
 		 // Metodo per leggere i dati dal file CSV
 		 public static List<String[]> readCSV(String filePath) {
 		 List<String[]> data = new ArrayList<>();
-		 try (BufferedReader br =
-		Files.newBufferedReader(Paths.get(filePath))) {
+		 try (    BufferedReader br = Files.newBufferedReader(Paths.get(filePath))      ) {
 		 String line;
 		 while ((line = br.readLine()) != null) {
 		 String[] row = line.split(","); // Divide i dati per colonna
