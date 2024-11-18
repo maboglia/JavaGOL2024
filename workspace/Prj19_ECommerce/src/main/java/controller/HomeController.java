@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Servlet implementation class LibriController
  */
-@WebServlet({"/", "/home", "/index" })
+@WebServlet({"/home", "/index" })
 public class HomeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
