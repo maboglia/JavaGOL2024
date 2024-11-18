@@ -28,7 +28,10 @@ public class CanzoniServiceImpl implements CanzoniService {
 	@Override
 	public List<Canzone> getCanzoniBiCantante(String cantante) {
 		// TODO Auto-generated method stub
-		return null;
+		return getCanzoni()
+				.stream()
+				.filter(c -> c.getCantante().contains(cantante))
+				.toList();
 	}
 
 	@Override

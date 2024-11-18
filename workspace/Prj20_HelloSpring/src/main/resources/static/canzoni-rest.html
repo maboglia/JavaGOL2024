@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Canzoni REST</h1>
+
+	<table id="tabella">
+	  <tr>
+	    <th>Titolo</th>
+	    <th>Cantante</th>
+	  </tr>
+	</table>
+
+<script type="text/javascript">
+
+	const URL = '/api/canzoni'
+	
+	fetch(URL)
+		.then(fileJson => fileJson.json())
+		.then(canzoniJS => {
+			for (canzone of canzoniJS){
+				const TR = document.createElement('tr')
+				const TD1 = document.createElement('td')
+				const TD2 = document.createElement('td')
+				TD1.textContent = canzone.titolo
+				TD2.textContent = canzone.cantante
+				TR.append(TD1, TD2)
+				document.getElementById('tabella').append(TR)
+			}
+		})
+
+</script>
+
+
+
+
+</body>
+</html>

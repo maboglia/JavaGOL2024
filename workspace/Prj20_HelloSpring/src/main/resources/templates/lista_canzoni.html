@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1 th:text="${titolo}">Titolo generico</h1>
+
+	<table>
+	  <tr>
+	    <th>Titolo</th>
+	    <th>Cantante</th>
+	  </tr>
+	  <tr th:each="canzone : ${lista}">
+	    <td>
+	    	<a  th:text="${canzone.titolo}"
+	    		href="https://www.google.com/search?q="
+	    		th:href="@{'https://www.google.com/search?q='+${canzone.titolo} + '' + ${canzone.cantante}}"
+	    	></a>
+		</td>
+	    <td th:text="${canzone.cantante}">Row 1: Col 2</td>
+	  </tr>
+	</table>
+
+
+</body>
+</html>
