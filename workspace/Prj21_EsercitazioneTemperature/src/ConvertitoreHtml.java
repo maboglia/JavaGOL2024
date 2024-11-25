@@ -9,7 +9,7 @@ import java.util.List;
 import javax.swing.text.html.HTML;
 
 public class ConvertitoreHtml {
-
+                                       
 	public static void main(String[] args) {
 		final String PATH = "\\\\fs-aule\\2025\\B22-166-2024\\";
 		String csvFilePath = PATH + "Test.csv"; // Percorso del file CSV

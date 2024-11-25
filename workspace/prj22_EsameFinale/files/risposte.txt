@@ -1,0 +1,41 @@
+Domande e rispettive risposte: 
+Domanda: 1
+father
+padre
+padre
+V
+Domanda: 2
+the
+il,lo,la,i, gli, le
+il,lo,la,i, gli, le
+V
+Domanda: 3
+main
+principale
+principale
+V
+Domanda: 4
+was
+passato di be
+adesso
+X
+Domanda: 5
+cover
+coprire
+tre
+X
+Domanda: 6
+common
+comune
+dare
+X
+Domanda: 7
+life
+vita
+guidare, condurre
+X
+Domanda: 8
+among
+tra, in mezzo
+certo
+X

@@ -1,0 +1,21 @@
+Domanda 1: Qual è la traduzione di "five"?
+Rsiposta utente: cinque
+Esito: CORRETTO
+
+Domanda 2: Qual è la traduzione di "his"?
+Rsiposta utente: suo/a
+Esito: CORRETTO
+
+Domanda 3: Qual è la traduzione di "and"?
+Rsiposta utente: e
+Esito: CORRETTO
+
+Domanda 4: Qual è la traduzione di "able"?
+Rsiposta utente: capace, abile
+Esito: CORRETTO
+
+Domanda 5: Qual è la traduzione di "cold"?
+Rsiposta utente: ridere
+Esito: SBAGLIATO
+
+Punteggio totale: 4/5
