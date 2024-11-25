@@ -12,8 +12,8 @@ public class ConvertitoreHtml {
 
 	public static void main(String[] args) {
 		final String PATH = "\\\\fs-aule\\2025\\B22-166-2024\\";
-		String csvFilePath = PATH + "temperature.csv"; // Percorso del file CSV
-		 String htmlFilePath = PATH + "temperature.html"; // Percorso del file HTML generato
+		String csvFilePath = PATH + "Test.csv"; // Percorso del file CSV
+		 String htmlFilePath = PATH + "TestInglese.html"; // Percorso del file HTML generato
 		 // Legge i dati dal CSV
 		 List<String[]> data = readCSV(csvFilePath);
 		 // Genera il file HTML
